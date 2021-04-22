@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>project1_group4_CodeNotebook-Copy1</title>
+<title>project1_group4_CodeNotebook-final</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -16673,58 +16673,6 @@ Prediction   0   1
 <strong>Balanced Accuracy:</strong> 0.55806310254163
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="with-RFE-Features">with RFE Features<a class="anchor-link" href="#with-RFE-Features">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="c1">## Train </span>
-<span class="n">lda_rfe</span> <span class="o">&lt;-</span> <span class="nf">lda</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x.train.rfe.dummies</span><span class="p">,</span> <span class="n">grouping</span> <span class="o">=</span> <span class="n">y.train</span><span class="p">)</span> 
-
-<span class="c1"># ## Classify</span>
-<span class="n">y.pred.lda_rfe</span> <span class="o">&lt;-</span> <span class="nf">predict</span><span class="p">(</span><span class="n">lda_rfe</span><span class="p">,</span> <span class="n">x.test.rfe.dummies</span><span class="p">)</span><span class="o">$</span><span class="n">class</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-Error in lda.default(x, grouping, ...): variables  4  6 17 24 appear to be constant within groups
-Traceback:
-
-1. lda(x = x.train.rfe.dummies, grouping = y.train)
-2. lda.data.frame(x = x.train.rfe.dummies, grouping = y.train)
-3. lda(structure(data.matrix(x), class = &#34;matrix&#34;), ...)
-4. lda.matrix(structure(data.matrix(x), class = &#34;matrix&#34;), ...)
-5. lda.default(x, grouping, ...)
-6. stop(sprintf(ngettext(length(const), &#34;variable %s appears to be constant within groups&#34;, 
- .     &#34;variables %s appear to be constant within groups&#34;), paste(const, 
- .     collapse = &#34; &#34;)), domain = NA)</pre>
-</div>
 </div>
 
 </div>
