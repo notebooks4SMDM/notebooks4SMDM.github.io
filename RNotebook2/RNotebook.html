@@ -13489,7 +13489,7 @@ height=420
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Estimating the optimal number of clusters: WSS</span>
-<span class="nf">fviz_nbclust</span><span class="p">(</span><span class="n">gower_mat</span><span class="p">,</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;wss&quot;</span><span class="p">,</span> <span class="n">k.max</span><span class="o">=</span><span class="m">7</span><span class="p">)</span>
+<span class="nf">fviz_nbclust</span><span class="p">(</span><span class="n">df_cluster</span><span class="p">,</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">diss</span><span class="o">=</span><span class="n">gower_mat</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;wss&quot;</span><span class="p">,</span> <span class="n">k.max</span><span class="o">=</span><span class="m">7</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13526,7 +13526,7 @@ height=420
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Estimating the optimal number of clusters: Silhouette</span>
-<span class="nf">fviz_nbclust</span><span class="p">(</span><span class="n">gower_mat</span><span class="p">,</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;silhouette&quot;</span><span class="p">,</span> <span class="n">k.max</span><span class="o">=</span><span class="m">7</span><span class="p">)</span>
+<span class="nf">fviz_nbclust</span><span class="p">(</span><span class="n">df_cluster</span><span class="p">,</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">diss</span><span class="o">=</span><span class="n">gower_mat</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;silhouette&quot;</span><span class="p">,</span> <span class="n">k.max</span><span class="o">=</span><span class="m">7</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13563,7 +13563,7 @@ height=420
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Estimating the optimal number of clusters: Gap Statistics</span>
-<span class="nf">fviz_nbclust</span><span class="p">(</span><span class="n">df_cluster</span><span class="p">,</span> <span class="n">kmeans</span><span class="p">,</span><span class="n">diss</span><span class="o">=</span><span class="n">gower_mat</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;gap_stat&quot;</span><span class="p">,</span> <span class="n">k.max</span><span class="o">=</span><span class="m">7</span><span class="p">)</span>
+<span class="nf">fviz_nbclust</span><span class="p">(</span><span class="n">df_cluster</span><span class="p">,</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">diss</span><span class="o">=</span><span class="n">gower_mat</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;gap_stat&quot;</span><span class="p">,</span> <span class="n">k.max</span><span class="o">=</span><span class="m">7</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15058,7 +15058,7 @@ height=420
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Highly suggests 1 cluster, but the Gap Stat has high values for all $k=5$ considered ($k=2$ is the lowest with a value between 0.93 and 0.94).</p>
+<p>Highly suggests 1 cluster, but the Gap Stat has high values for all $k=7$ considered ($k=2$ is the lowest with a value between 0.93 and 0.94).</p>
 <p>The gap statistic compares the total intracluster variation (within a cluster variation) for different values of k with their expected values under null reference distribution of the data. The estimate of the optimal clusters (k) will be the value that maximizes $Gap(k)$.</p>
 
 </div>
